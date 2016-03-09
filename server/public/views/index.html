@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>State Park Log</title>
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/scripts/clientapp.js"></script>
+    <script type="text/javascript" src="/scripts/factories/dataFactory.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/homeController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/favoriteController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/infoController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/listController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/visitedController.js"></script>
+
+    <link rel="stylesheet" href="/vendors/normalize.css" />
+    <link rel="stylesheet" href="/vendors/skeleton.css" />
+    <link rel="stylesheet" href="/styles/stylesheet.css" />
+</head>
+<body ng-app="myApp">
+<div>
+    <ul>
+        <li>
+            <a href="#home">Home</a>
+            <a href="#list">All Parks</a>
+            <a href="#visited">My Parks</a>
+            <a href="#favorite">My Favorites</a>
+        </li>
+    </ul>
+</div>
+<main ng-view></main>
+</body>
+</html>

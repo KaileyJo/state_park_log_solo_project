@@ -1,0 +1,25 @@
+{
+  "name": "state_park_log",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "author": "KaileyColestock",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "mongoose": "^4.4.6",
+    "normalize.css": "^3.0.3",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "skeleton-css": "^2.0.4"
+  }
+}
