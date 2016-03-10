@@ -2,16 +2,20 @@ myApp.controller('HomeController', ['$scope', 'dataFactory', function($scope, da
     console.log('Home Controller');
     $scope.dataFactory = dataFactory;
     $scope.regions = ['Central', 'Metro', 'Northeast', 'Northwest', 'South'];
-    $scope.parks = function() {
-        dataFactory.getParks().then(function(response) {
-            console.log(response);
-        });
-    };
+    //$scope.parks = function() {
+    //    dataFactory.getParks().then(function(response) {
+    //        console.log(response);
+    //    });
+    //};
 
     var getParkData = function() {
         dataFactory.getParks().then(function() {
             $scope.parks = dataFactory.parksList();
         });
+    };
+
+    $scope.selectPark = function(park) {
+        dataFactory.currentPark(park);
     };
 
     $scope.submitPark = function() {

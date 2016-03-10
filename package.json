@@ -17,6 +17,8 @@
     "express": "^4.13.4",
     "express-session": "^1.13.0",
     "mongoose": "^4.4.6",
+    "ng-infinite-scroll": "^1.2.1",
+    "ng-table": "^0.5.4",
     "normalize.css": "^3.0.3",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",

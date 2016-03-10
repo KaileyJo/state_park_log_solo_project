@@ -1,34 +1,30 @@
 <form>
-    <label for="park-list">Choose a Park:</label>
-    <select id="park-list" ng-model="park" ng-options="park.park for park in parks"></select>
-    <input type="submit" ng-click="selectPark()" value="Get Info" />
+    <select id="park-list" ng-model="park" ng-options="park.park for park in parks">
+        <option value="">Choose a Park...</option>
+    </select>
+    <a href="#info"><input type="submit" ng-click="selectPark(park)" value="Get Info" /></a>
 </form>
 <h3>Didn't find your park? Enter a new park here:</h3>
 <form>
-    <label for="name">Park Name: </label>
-    <input type="text" id="name" ng-model="name" name="name" />
-    <label for="type">Park Type: </label>
+    <input type="text" placeholder="Park Name" ng-model="name" />
     <select id="type" ng-model="type" name="type">
+        <option value="">Park Type...</option>
         <option value="SP">State Park</option>
         <option value="SRA">State Recreation Area</option>
     </select>
-    <label for="siteType">Site Type: </label>
+    <select id="region-list" ng-model="region" ng-options="region for region in regions">
+        <option value="">Region...</option>
+    </select>
     <select id="siteType" ng-model="siteType" name="siteType">
+        <option value="">Site Type...</option>
         <option value="rustic">Rustic</option>
         <option value="semi-modern">Semi-Modern</option>
     </select>
-    <label for="siteNumber">Number of Sites: </label>
-    <input type="number" id="siteNumber" ng-model="siteNumber" name="siteNumber" />
-    <label for="miles">Miles of Hiking Trails: </label>
-    <input type="number" id="miles" ng-model="miles" name="miles" />
-    <textarea rows="4" cols="50" ng-model="description">Park Description...</textarea>
-    <label for="link">Park Website Link: </label>
-    <input type="text" id="link" ng-model="link" name="link" />
-    <label for="lat">Latitude: </label>
-    <input type="number" id="lat" ng-model="lat" name="lat" />
-    <label for="long">Longitude: </label>
-    <input type="number" id="long" ng-model="long" name="long" />
-    <label for="region-list">Region: </label>
-    <select id="region-list" ng-model="region" ng-options="region for region in regions"></select>
+    <input type="number" id="siteNumber" ng-model="siteNumber" name="siteNumber" placeholder="# of Sites" />
+    <input type="number" id="miles" ng-model="miles" name="miles" placeholder="Miles of Hiking Trails" />
+    <textarea rows="4" cols="50" ng-model="description" placeholder="Park Description..."></textarea>
+    <input type="text" id="link" ng-model="link" name="link" placeholder="Park Website Link" />
+    <input type="number" id="lat" ng-model="lat" name="lat" placeholder="Latitude" />
+    <input type="number" id="long" ng-model="long" name="long" placeholder="Longitude" />
     <input type="submit" ng-click="submitPark()" value="Submit Park" />
 </form>

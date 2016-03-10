@@ -5,7 +5,7 @@ myApp.factory('dataFactory', ['$http', function($http) {
         console.log('Getting Data');
         var promise = $http.get('/parks').then(function(response) {
             parkList = response.data;
-            console.log('Async data response', parkList);
+            //console.log('Async data response', parkList);
         });
         return promise;
     };
@@ -13,6 +13,10 @@ myApp.factory('dataFactory', ['$http', function($http) {
     var postParkData = function(park) {
         var promise = $http.post('/parks', park).then(function(response) {});
         return promise;
+    };
+
+    var selectPark = function(park) {
+        parkList = park;
     };
 
     var publicApi = {
@@ -24,6 +28,9 @@ myApp.factory('dataFactory', ['$http', function($http) {
         },
         parksList: function() {
             return parkList;
+        },
+        currentPark: function(park) {
+            selectPark(park);
         }
     };
 
