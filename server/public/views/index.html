@@ -6,7 +6,6 @@
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
     <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
     <script type="text/javascript" src="/vendors/ng-table.min.js"></script>
-    <script type="text/javascript" src="/vendors/ng-infinite-scroll.min.js"></script>
     <script type="text/javascript" src="/scripts/clientapp.js"></script>
     <script type="text/javascript" src="/scripts/factories/dataFactory.js"></script>
     <script type="text/javascript" src="/scripts/controllers/homeController.js"></script>
@@ -14,6 +13,7 @@
     <script type="text/javascript" src="/scripts/controllers/infoController.js"></script>
     <script type="text/javascript" src="/scripts/controllers/listController.js"></script>
     <script type="text/javascript" src="/scripts/controllers/visitedController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/userController.js"></script>
 
     <link rel="stylesheet" href="/vendors/normalize.css" />
     <link rel="stylesheet" href="/vendors/skeleton.css" />
@@ -23,12 +23,11 @@
 <body ng-app="myApp">
 <div>
     <ul>
-        <li>
-            <a href="#home">Home</a>
-            <a href="#list">All Parks</a>
-            <a href="#visited">My Parks</a>
-            <a href="#favorite">My Favorites</a>
-        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#list">All Parks</a></li>
+        <li><a href="#visited">My Parks</a></li>
+        <li><a href="#favorite">My Favorites</a></li>
+        <li><a href="#login">Login</a></li>
     </ul>
 </div>
 <main ng-view></main>

@@ -18,3 +18,21 @@ label {
 input {
     display: block;
 }
+
+.constrained {
+    height: 630px;
+    overflow-y: scroll;
+}
+
+.ng-table-pager {
+    display: flex;
+    justify-content: center;
+
+}
+
+.pagination {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+
+}

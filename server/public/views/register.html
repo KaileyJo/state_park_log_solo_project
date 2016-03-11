@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register New Login</title>
+
+    <link rel="stylesheet" href="/vendors/normalize.css" />
+    <link rel="stylesheet" href="/vendors/skeleton.css" />
+    <link rel="stylesheet" href="/styles/stylesheet.css">
+
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/scripts/clientapp.js"></script>
+</head>
+<body ng-app="myApp">
+    <h1 class="lead">Register New User</h1>
+    <!-- Set action and method -->
+    <form action="/register" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+        <input type="submit" value="Register"/>
+    </form>
+</body>
+</html>

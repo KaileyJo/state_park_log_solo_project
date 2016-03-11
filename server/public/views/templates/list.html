@@ -1,10 +1,16 @@
-<table infinte-scroll="moreParks()" ng-table="parkTable" show-filter="false">
-    <tr ng-repeat="park in data">
-        <td data-title="'Park Name'" sortable="'park'" filter="{ 'park' : 'text' }">{{park.park}}</td>
-        <td data-title="'Type'" sortable="'type'">{{park.type}}</td>
-        <td data-title="'Region'" sortable="'region'">{{park.region}}</td>
-        <td data-title="'# Campsites'" sortable="'siteNumber'">{{park.siteNumber}}</td>
-        <td data-title="'Site Type'" sortable="'siteType'">{{park.siteType}}</td>
-        <td data-title="'Hiking Trails (miles)'" sortable="'miles'">{{park.miles}}</td>
-    </tr>
-</table>
+<div class="constrained">
+    <table ng-table="parkTable">
+        <tr ng-repeat="park in data">
+            <td data-title="'Park Name'" sortable="'park'">{{park.park}}</td>
+            <td data-title="'Type'" sortable="'type'">{{park.type}}</td>
+            <td data-title="'Region'" sortable="'region'">{{park.region}}</td>
+            <td data-title="'# Campsites'" sortable="'siteNumber'">{{park.siteNumber}}</td>
+            <td data-title="'Site Type'" sortable="'siteType'">{{park.siteType}}</td>
+            <td data-title="'Hiking Trails (miles)'" sortable="'miles'">{{park.miles}}</td>
+        </tr>
+    </table>
+</div>
+
+
+<!--show-filter="false"-->
+<!--filter="{ 'park' : 'text' }"-->
