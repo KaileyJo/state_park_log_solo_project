@@ -2,3 +2,4 @@
 node_modules/
 npm-debug.log
 parks.json
+.idea/workspace.xml
