@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Welcome!</title>
+    <meta charset="UTF-8">
+    <title>State Park Log</title>
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/vendors/ng-table.min.js"></script>
+    <script type="text/javascript" src="/scripts/userapp.js"></script>
+    <script type="text/javascript" src="/scripts/factories/dataFactory.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/homeController.js"></script>
+    <!--<script type="text/javascript" src="/scripts/controllers/logoutController.js"></script>-->
+    <script type="text/javascript" src="/scripts/controllers/favoriteController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/infoController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/listController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/visitedController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/userController.js"></script>
 
     <link rel="stylesheet" href="/vendors/normalize.css" />
     <link rel="stylesheet" href="/vendors/skeleton.css" />
-    <link rel="stylesheet" href="/styles/stylesheet.css">
-
-    <script type="text/javascript" src="/vendors/angular.min.js"></script>
-    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
-    <script type="text/javascript" src="/scripts/clientapp.js"></script>
-    <script type="text/javascript" src="/scripts/controllers/userController.js"></script>
+    <link rel="stylesheet" href="/vendors/ng-table.min.css" />
+    <link rel="stylesheet" href="/styles/stylesheet.css" />
 </head>
 <body ng-app="myApp">
-    <div ng-controller="UserController">
-        <h1 id="welcome" class="lead">Welcome, {{userName}}!</h1>
+<div ng-controller="UserController">
+    <h1>Welcome, {{userName}}!</h1>
+    <div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#list">All Parks</a></li>
+            <li><a href="#visited">My Parks</a></li>
+            <li><a href="#favorite">My Favorites</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
     </div>
+</div>
+<main ng-view></main>
 </body>
 </html>

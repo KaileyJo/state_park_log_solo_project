@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Login Failed</title>
-
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/scripts/clientapp.js"></script>
 
     <link rel="stylesheet" href="/vendors/normalize.css" />
     <link rel="stylesheet" href="/vendors/skeleton.css" />
     <link rel="stylesheet" href="/styles/stylesheet.css">
 </head>
-<body>
+<body ng-app="myApp">
     <h1>Failed to login</h1>
-    <p><a href="/login">Back to login</a></p>
+    <p><a href="/#/login">Back to login</a></p>
 </body>
 </html>

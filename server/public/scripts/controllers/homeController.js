@@ -1,5 +1,5 @@
 myApp.controller('HomeController', ['$scope', 'dataFactory', function($scope, dataFactory) {
-    console.log('Home Controller');
+    //console.log('Home Controller');
     $scope.dataFactory = dataFactory;
     $scope.regions = ['Central', 'Metro', 'Northeast', 'Northwest', 'South'];
     //$scope.parks = function() {

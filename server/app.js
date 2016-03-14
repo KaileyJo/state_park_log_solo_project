@@ -8,6 +8,7 @@ var passport = require('./strategies/user');
 var session = require('express-session');
 
 var login = require('./routes/login');
+var logout = require('./routes/logout');
 var user = require('./routes/user');
 var register = require('./routes/register');
 
@@ -28,8 +29,21 @@ app.use(passport.session());
 app.use('/register', register);
 app.use('/user', user);
 app.use('/login', login);
+app.use('/logout', logout);
 
-mongoose.connect('mongodb://localhost/stateparklog');
+var mongoURI = 'mongodb://localhost:27017/stateparklog';
+
+var mongoDB = mongoose.connect(mongoURI).connection;
+
+mongoDB.on('error', function(err) {
+    if(err) console.log('MONGO ERROR:: ', err);
+});
+
+mongoDB.once('open', function() {
+    console.log('Connected to Mongo');
+});
+
+//mongoose.connect('mongodb://localhost/stateparklog');
 mongoose.model(
     'Park',
     new Schema({
@@ -94,18 +108,6 @@ app.use(express.static('server/public/views'));
 app.use(express.static('server/public/vendors'));
 app.use(express.static('server/public/styles'));
 app.use(express.static('server/public/scripts'));
-
-var mongoURI = 'mongodb://localhost:27017/user_passport_session';
-
-var mongoDB = mongoose.connect(mongoURI).connection;
-
-mongoDB.on('error', function(err) {
-    if(err) console.log('MONGO ERROR:: ', err);
-});
-
-mongoDB.once('open', function() {
-    console.log('Connected to Mongo');
-});
 
 app.set('port', process.env.PORT || 5000);
 app.listen(app.get('port'), function() {
