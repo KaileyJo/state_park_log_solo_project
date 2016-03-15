@@ -8,6 +8,10 @@ myApp.controller('HomeController', ['$scope', 'dataFactory', function($scope, da
     //    });
     //};
 
+    $scope.loggedIn = dataFactory.loggedIn;
+
+    console.log('loggedIn?::', dataFactory.loggedIn);
+
     var getParkData = function() {
         dataFactory.getParks().then(function() {
             $scope.parks = dataFactory.parksList();

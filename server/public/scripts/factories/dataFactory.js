@@ -1,11 +1,10 @@
 myApp.factory('dataFactory', ['$http', function($http) {
     var parkList = undefined;
+    var userInfo = undefined;
 
     var getParkData = function() {
-        console.log('Getting Data');
         var promise = $http.get('/parks').then(function(response) {
             parkList = response.data;
-            //console.log('Async data response', parkList);
         });
         return promise;
     };
@@ -17,6 +16,37 @@ myApp.factory('dataFactory', ['$http', function($http) {
 
     var selectPark = function(park) {
         parkList = park;
+    };
+
+    var visitPark = function(park) {
+        var data = {name: park};
+        console.log('clicked ', park, publicApi.userID);
+        var promise = $http.put('/user/' + publicApi.userID, data).then(function(response) {
+            console.log('visitPark response', response.data);
+        });
+        return promise;
+    };
+
+    var getUserData = function() {
+        var promise = $http.get('/user').then(function(response) {
+            console.log('getting user data');
+            if(response.data) {
+                console.log('user data:: ', response.data);
+                userInfo = {
+                    userName: response.data.username,
+                    userParks: response.data.parks
+                };
+
+                publicApi.userID = response.data._id;
+                publicApi.loggedIn = true;
+
+                console.log(userInfo);
+            } else {
+                $window.location.href = '/#/login';
+            }
+        });
+
+        return promise;
     };
 
     var publicApi = {
@@ -31,7 +61,18 @@ myApp.factory('dataFactory', ['$http', function($http) {
         },
         currentPark: function(park) {
             selectPark(park);
-        }
+        },
+        updateMyParks: function(park) {
+            visitPark(park);
+        },
+        getUser: function() {
+            return getUserData();
+        },
+        user: function() {
+            return userInfo;
+        },
+        loggedIn: false,
+        userID: false
     };
 
     return publicApi;

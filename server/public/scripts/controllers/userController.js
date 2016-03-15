@@ -1,22 +1,25 @@
-myApp.controller('UserController', ['$scope', '$http', '$window', function($scope, $http, $window) {
-    $scope.userName;
-    $scope.logOut = function() {
-        console.log('logging out...?');
-        var promise = $http.get('/logout').then(function(response) {
+myApp.controller('UserController', ['$scope', '$http', '$window', 'dataFactory', function($scope, $http, $window, dataFactory) {
+    $scope.userName = '';
+    $scope.userParks = [];
 
+    $scope.logOut = function() {
+        var promise = $http.get('/logout').then(function(response) {
         });
         return promise;
     };
 
-    // This happens after page load, which means it has authenticated if it was ever going to
-    // NOT SECURE
-    $http.get('/user').then(function(response) {
-        //console.log('getting user');
-        if(response.data) {
-            $scope.userName = response.data.username;
-            //console.log('User Data: ', $scope.userName);
-        } else {
-            $window.location.href = '/#/login';
-        }
-    });
+    $scope.logOut = function() {
+        dataFactory.loggedIn = false;
+        dataFactory.id = false;
+    };
+
+    var getUserData = function() {
+        dataFactory.getUser().then(function() {
+            var userNamePlease = dataFactory.user();
+            $scope.userName = userNamePlease.userName;
+            $scope.userParks = userNamePlease.userParks;
+        });
+    };
+
+    getUserData();
 }]);
