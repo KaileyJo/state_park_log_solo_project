@@ -5,6 +5,25 @@ var Users = require('../models/user');
 
 console.log('routes/user');
 
+router.get('/:id', function(req, res) {
+    console.log('getting user/parks');
+    Users.aggregate([{$lookup:{
+        from: 'parks',
+        localField: 'park',
+        foreignField: 'name',
+        as: 'parkInfo'
+    }}], function(err, data) {
+        if(err) {
+            console.log(err);
+        }
+        //else if (data._id == req.params.id) {
+            console.log(data);
+            res.send(data);
+        //}
+
+    });
+});
+
 // Handles Ajax request for user information if user is authenticated
 router.get('/', function(req, res) {
     // check if logged in
@@ -29,7 +48,6 @@ router.put('/:id', function(req, res) {
         }
     });
 });
-
 
 module.exports = router;
 
