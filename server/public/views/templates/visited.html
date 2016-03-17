@@ -1,12 +1,29 @@
-<div class="constrained">
-    <table ng-table="parkTable">
-        <tr ng-repeat="park in data">
-            <td data-title="'Park Name'" sortable="'park'">{{park.park}}</td>
-            <td data-title="'Type'" sortable="'type'">{{park.type}}</td>
-            <td data-title="'Region'" sortable="'region'">{{park.region}}</td>
-            <td data-title="'# Campsites'" sortable="'siteNumber'">{{park.siteNumber}}</td>
-            <td data-title="'Site Type'" sortable="'siteType'">{{park.siteType}}</td>
-            <td data-title="'Hiking Trails (miles)'" sortable="'miles'">{{park.miles}}</td>
-        </tr>
-    </table>
-</div>
+<table st-table="displayedParks" st-safe-src="parkTable" class="table table-striped">
+    <thead>
+    <tr>
+        <th colspan="5"><input st-search="" class="form-control" placeholder="Search Parks..." type="text"/></th>
+    </tr>
+    <tr>
+        <th st-sort="park">Park Name</th>
+        <th st-sort="type">Type</th>
+        <th st-sort="region">Region</th>
+        <th st-sort="siteNumber"># Campsites</th>
+        <th st-sort="siteType">Site Type</th>
+        <th st-sort="miles">Hiking Trails (miles)</th>
+        <th ng-if="loggedIn">Visited?</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="park in displayedParks">
+        <td>{{park.park}}</td>
+        <td>{{park.type}}</td>
+        <td>{{park.region}}</td>
+        <td>{{park.siteNumber}}</td>
+        <td>{{park.siteType}}</td>
+        <td>{{park.miles}}</td>
+        <td ng-if="loggedIn">
+            <button ng-click="visitPark(park.park)">N</button>
+        </td>
+    </tr>
+    </tbody>
+</table>

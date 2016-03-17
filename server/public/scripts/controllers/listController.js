@@ -17,3 +17,11 @@ myApp.controller('ListController', ['$scope', 'dataFactory',
         dataFactory.updateMyParks(park);
     };
 }]);
+
+
+//possible mongo request to join parks and name, puts all parks in parkinfo field
+//db.users.aggregate([{$lookup:{
+//from: 'parks',
+//    localField: 'park',
+//    foreignField: 'name',
+//    as: 'parkInfo'}}])

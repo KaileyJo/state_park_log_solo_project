@@ -1,4 +1,4 @@
-myApp.controller('UserController', ['$scope', '$http', '$window', 'dataFactory', function($scope, $http, $window, dataFactory) {
+myApp.controller('UserController', ['$scope', '$http', 'dataFactory', function($scope, $http, dataFactory) {
     $scope.userName = '';
     $scope.userParks = [];
 

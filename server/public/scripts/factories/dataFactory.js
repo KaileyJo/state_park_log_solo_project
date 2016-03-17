@@ -1,4 +1,4 @@
-myApp.factory('dataFactory', ['$http', function($http) {
+myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
     var parkList = undefined;
     var userInfo = undefined;
 
@@ -19,19 +19,20 @@ myApp.factory('dataFactory', ['$http', function($http) {
     };
 
     var visitPark = function(park) {
+        console.log('Hey this is really weird.......');
         var data = {name: park};
-        console.log('clicked ', park, publicApi.userID);
+        //console.log('clicked ', park, publicApi.userID);
         var promise = $http.put('/user/' + publicApi.userID, data).then(function(response) {
-            console.log('visitPark response', response.data);
+            //console.log('visitPark response', response.data);
         });
         return promise;
     };
 
     var getUserData = function() {
         var promise = $http.get('/user').then(function(response) {
-            console.log('getting user data');
+            //console.log('getting user data');
             if(response.data) {
-                console.log('user data:: ', response.data);
+                //console.log('user data:: ', response.data);
                 userInfo = {
                     userName: response.data.username,
                     userParks: response.data.parks
@@ -40,10 +41,41 @@ myApp.factory('dataFactory', ['$http', function($http) {
                 publicApi.userID = response.data._id;
                 publicApi.loggedIn = true;
 
-                console.log(userInfo);
+                //console.log(userInfo);
             } else {
                 $window.location.href = '/#/login';
             }
+        });
+
+        return promise;
+    };
+
+    var getUserParkData = function() {
+        console.log('getuserparkdata userID:: ', publicApi.userID);
+        var promise = $http.get('/user/' + publicApi.userID).then(function(response) {
+            console.log(response.data);
+            if(response.data) {
+                console.log('getting user park data');
+                userInfo = {
+                    userName: response.data.username,
+                    userParks: response.data.parks,
+                    parkInfo: response.data.parkInfo
+                };
+                parkList = [];
+                console.log(userInfo);
+            } else {
+                console.log('errrrrrrr');
+            }
+
+            //for(var i = 0; i < userInfo.parkInfo.length; i++) {
+            //    for(var j = 0; j < userInfo.userParks.length; j++) {
+            //        if (userInfo.parkInfo[i].park == userInfo.userParks[j].name) {
+            //            parkList.push(userInfo.parkInfo[i]);
+            //        }
+            //    }
+            //}
+            //parkList = response.data.parkInfo;
+
         });
 
         return promise;
@@ -63,13 +95,16 @@ myApp.factory('dataFactory', ['$http', function($http) {
             selectPark(park);
         },
         updateMyParks: function(park) {
-            visitPark(park);
+            return visitPark(park);
         },
         getUser: function() {
             return getUserData();
         },
         user: function() {
             return userInfo;
+        },
+        visitedParks: function() {
+            return getUserParkData();
         },
         loggedIn: false,
         userID: false

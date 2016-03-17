@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+//var Schema = mongoose.Schema;
 
 var passport = require('./strategies/user');
 var session = require('express-session');
@@ -10,6 +10,7 @@ var session = require('express-session');
 var login = require('./routes/login');
 var logout = require('./routes/logout');
 var user = require('./routes/user');
+var parks = require('./routes/parks');
 var register = require('./routes/register');
 
 app.use(bodyParser.json());
@@ -28,6 +29,7 @@ app.use(passport.session());
 
 app.use('/register', register);
 app.use('/user', user);
+app.use('/parks', parks);
 app.use('/login', login);
 app.use('/logout', logout);
 
@@ -44,64 +46,7 @@ mongoDB.once('open', function() {
 });
 
 //mongoose.connect('mongodb://localhost/stateparklog');
-mongoose.model(
-    'Park',
-    new Schema({
-            'park': String,
-            'type': String,
-            'siteType': String,
-            'siteNumber': Number,
-            'miles': Number,
-            'description': String,
-            'link': String,
-            'lat': Number,
-            'long': Number,
-            'region': String
-        },
-        {
-            collection: 'parks'
-        }
-    )
-);
 
-var Park = mongoose.model('Park');
-
-app.get('/parks', function(req, res) {
-    Park.find({}, function(err, data) {
-        if(err) {
-            console.log(err);
-        }
-        res.send(data);
-    }).sort({'park' : 1});
-});
-
-app.post('/parks', function(req, res) {
-    var addPark = new Park({
-        'park': req.body.park,
-        'type': req.body.type,
-        'siteType': req.body.siteType,
-        'siteNumber': req.body.siteNumber,
-        'miles': req.body.miles,
-        'description': req.body.description,
-        'link': req.body.link,
-        'lat': req.body.lat,
-        'long': req.body.long,
-        'region': req.body.region
-    });
-
-    addPark.save(function(err, data) {
-        if(err) {
-            console.log('ERR::', err);
-        }
-
-        Park.find({}, function(err, data) {
-            if(err) {
-                console.log(err);
-            }
-            res.send(data);
-        });
-    });
-});
 
 app.use(express.static('server/public/'));
 app.use(express.static('server/public/views'));
