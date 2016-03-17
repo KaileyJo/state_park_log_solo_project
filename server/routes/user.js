@@ -4,7 +4,7 @@ var passport = require('passport');
 var Users = require('../models/user');
 
 router.get('/:id', function(req, res) {
-    console.log('getting user/parks');
+    //console.log('getting user/parks');
     Users.aggregate([{$lookup:{
         from: 'parks',
         localField: 'name',
@@ -15,7 +15,7 @@ router.get('/:id', function(req, res) {
             console.log(err);
         }
         //else if (data._id == req.params.id) {
-            console.log(data);
+        //    console.log(data);
             res.send(data);
         //}
 

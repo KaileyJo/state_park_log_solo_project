@@ -4,14 +4,16 @@ myApp.controller('UserController', ['$scope', '$http', 'dataFactory', function($
 
     $scope.logOut = function() {
         var promise = $http.get('/logout').then(function(response) {
+            dataFactory.loggedIn = false;
+            dataFactory.id = false;
         });
         return promise;
     };
 
-    $scope.logOut = function() {
-        dataFactory.loggedIn = false;
-        dataFactory.id = false;
-    };
+    //$scope.logOut = function() {
+    //    dataFactory.loggedIn = false;
+    //    dataFactory.id = false;
+    //};
 
     var getUserData = function() {
         dataFactory.getUser().then(function() {

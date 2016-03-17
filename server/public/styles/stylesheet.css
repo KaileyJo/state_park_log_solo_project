@@ -2,6 +2,11 @@ body {
     margin: 20px;
 }
 
+/*li {*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+/*}*/
+
 ul {
     list-style: none;
 }
@@ -19,20 +24,20 @@ input {
     display: block;
 }
 
-.constrained {
-    height: 630px;
-    overflow-y: scroll;
-}
+/*.constrained {*/
+    /*height: 630px;*/
+    /*overflow-y: scroll;*/
+/*}*/
 
-.ng-table-pager {
-    display: flex;
-    justify-content: center;
+/*.ng-table-pager {*/
+    /*display: flex;*/
+    /*justify-content: center;*/
 
-}
+/*}*/
 
-.pagination {
-    width: 500px;
-    display: flex;
-    justify-content: space-around;
+/*.pagination {*/
+    /*width: 500px;*/
+    /*display: flex;*/
+    /*justify-content: space-around;*/
 
-}
+/*}*/

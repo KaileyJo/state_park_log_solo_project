@@ -2,12 +2,10 @@ myApp.controller('ListController', ['$scope', 'dataFactory', function($scope, da
     $scope.dataFactory = dataFactory;
     $scope.userID = dataFactory.userID;
     $scope.loggedIn = dataFactory.loggedIn;
-    var parks = [];
 
     var getParkData = function () {
         dataFactory.getParks().then(function() {
-            parks = dataFactory.parksList();
-            $scope.parkTable = parks;
+            $scope.parkTable = dataFactory.parksList();
         })
     };
 

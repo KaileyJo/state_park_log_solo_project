@@ -1,1 +1,12 @@
 <h3>Favorites</h3>
+<div ng-repeat="park in parks">
+    <h2>{{park.park}} {{park.type}}</h2>
+    <h3>{{park.region}}</h3>
+    <p>{{park.description}}</p>
+    <ul>
+        <li>Location: {{park.lat}}, {{park.long}}</li>
+        <li>{{park.siteNumber}} {{park.siteType}} campsites</li>
+        <li>Available Hiking Trails: {{park.miles}} miles</li>
+        <li><a href="{{park.link}}">More Info!</a></li>
+    </ul>
+</div>
