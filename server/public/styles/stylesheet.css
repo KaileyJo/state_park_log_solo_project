@@ -2,10 +2,10 @@ body {
     margin: 20px;
 }
 
-/*li {*/
-    /*display: flex;*/
-    /*flex-direction: row;*/
-/*}*/
+li {
+    display: inline;
+    padding-left: 20px;
+}
 
 ul {
     list-style: none;
@@ -16,28 +16,6 @@ a {
     text-decoration: none;
 }
 
-label {
+input, select {
     display: block;
 }
-
-input {
-    display: block;
-}
-
-/*.constrained {*/
-    /*height: 630px;*/
-    /*overflow-y: scroll;*/
-/*}*/
-
-/*.ng-table-pager {*/
-    /*display: flex;*/
-    /*justify-content: center;*/
-
-/*}*/
-
-/*.pagination {*/
-    /*width: 500px;*/
-    /*display: flex;*/
-    /*justify-content: space-around;*/
-
-/*}*/

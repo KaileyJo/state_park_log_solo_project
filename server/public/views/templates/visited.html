@@ -1,3 +1,17 @@
+<div ng-if="currentID" ng-repeat="park in parkTable">
+    <div ng-if="currentID == park._id">
+        <form><h5>{{park.park}}</h5>
+            <input type="number" ng-model="campsite" placeholder="Your Site #" />
+            <input type="number" ng-model="miles" placeholder="Miles Hiked" />
+            <textarea rows="4" cols="50" ng-model="notes" placeholder="Notes..."></textarea>
+            <select ng-model="rating">
+                <option value="">Stars</option>
+                <option ng-repeat="number in rangeValues" value="{{number}}">{{number}} / 5</option>
+            </select>
+            <input type="submit" ng-click="updateUserPark()" value="Submit Park" />
+        </form>
+    </div>
+</div>
 <table st-table="displayedParks" st-safe-src="parkTable" class="table table-striped">
     <thead>
     <tr>
@@ -9,7 +23,8 @@
         <th st-sort="region">Region</th>
         <th st-sort="siteNumber"># Campsites</th>
         <th st-sort="miles">Hiking Trails (miles)</th>
-        <th ng-if="loggedIn">Favorite?</th>
+        <th>Favorite?</th>
+        <th>Update</th>
     </tr>
     </thead>
     <tbody>
@@ -19,10 +34,11 @@
         <td>{{park.region}}</td>
         <td>{{park.siteNumber}}</td>
         <td>{{park.miles}}</td>
-        <td ng-if="loggedIn">
+        <td>
             <button ng-if="park.userFavorite != true" ng-click="favoritePark(park._id)">N</button>
             <button ng-if="park.userFavorite == true">Y</button>
         </td>
+        <td><button ng-click="update(park._id)">Edit Park</button></td>
     </tr>
     </tbody>
 </table>
