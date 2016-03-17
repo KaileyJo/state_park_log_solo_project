@@ -3,7 +3,7 @@ myApp.controller('FavoriteController', ['$scope', 'dataFactory', function($scope
 
     var getParkData = function () {
             dataFactory.getParks().then(function() {
-                $scope.parks = dataFactory.visitedParksList();
+                $scope.parks = dataFactory.favoriteParksList();
             });
     };
 

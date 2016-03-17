@@ -1,5 +1,6 @@
 myApp.controller('VisitedController', ['$scope', 'dataFactory', function($scope, dataFactory) {
     $scope.dataFactory = dataFactory;
+    $scope.loggedIn = dataFactory.loggedIn;
 
     var getParkData = function () {
             dataFactory.getParks().then(function() {

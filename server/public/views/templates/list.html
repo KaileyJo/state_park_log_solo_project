@@ -1,7 +1,7 @@
 <table st-table="displayedParks" st-safe-src="parkTable" class="table table-striped">
     <thead>
     <tr>
-        <th colspan="5"><input st-search="" class="form-control" placeholder="Search Parks..." type="text"/></th>
+        <th colspan="6"><input st-search="" class="form-control" placeholder="Search Parks..." type="text"/></th>
     </tr>
     <tr>
         <th st-sort="park">Park Name</th>
@@ -22,7 +22,6 @@
         <td>{{park.siteType}}</td>
         <td>{{park.miles}}</td>
         <td ng-if="loggedIn">
-            <!--<button ng-if="userID != park.visited[0].user" ng-click="visitPark(park._id)">N</button>-->
             <button ng-if="park.userVisited != true" ng-click="visitPark(park._id)">N</button>
             <button ng-if="park.userVisited == true">Y</button>
         </td>

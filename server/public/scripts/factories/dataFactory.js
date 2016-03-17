@@ -8,6 +8,7 @@ myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
         var promise = $http.get('/parks').then(function(response) {
             parkList = response.data;
             visitParkList();
+            favParkList();
         });
         return promise;
     };
@@ -62,6 +63,21 @@ myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
                     if (publicApi.userID == visitedPark[j].user) {
                         parkList[i].userVisited = true;
                         visitedParkList.push(parkList[i]);
+                    }
+                }
+            }
+        }
+    };
+
+    var favParkList = function() {
+        favoriteParkList = [];
+        for (var i = 0; i < parkList.length; i++) {
+            if(parkList[i].favorite) {
+                var favoritePark = parkList[i].favorite;
+                for(var j = 0; j < favoritePark.length; j++) {
+                    if (publicApi.userID == favoritePark[j].user) {
+                        parkList[i].userFavorite = true;
+                        favoriteParkList.push(parkList[i]);
                     }
                 }
             }

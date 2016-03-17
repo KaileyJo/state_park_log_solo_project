@@ -1,16 +1,7 @@
 myApp.controller('HomeController', ['$scope', 'dataFactory', function($scope, dataFactory) {
-    //console.log('Home Controller');
     $scope.dataFactory = dataFactory;
     $scope.regions = ['Central', 'Metro', 'Northeast', 'Northwest', 'South'];
-    //$scope.parks = function() {
-    //    dataFactory.getParks().then(function(response) {
-    //        console.log(response);
-    //    });
-    //};
-
     $scope.loggedIn = dataFactory.loggedIn;
-
-    console.log('loggedIn?::', dataFactory.loggedIn);
 
     var getParkData = function() {
         dataFactory.getParks().then(function() {

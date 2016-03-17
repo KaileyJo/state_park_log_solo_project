@@ -10,11 +10,6 @@ myApp.controller('UserController', ['$scope', '$http', 'dataFactory', function($
         return promise;
     };
 
-    //$scope.logOut = function() {
-    //    dataFactory.loggedIn = false;
-    //    dataFactory.id = false;
-    //};
-
     var getUserData = function() {
         dataFactory.getUser().then(function() {
             var userNamePlease = dataFactory.user();

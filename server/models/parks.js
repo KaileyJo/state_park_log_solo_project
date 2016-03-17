@@ -14,7 +14,8 @@ mongoose.model(
             'lat': Number,
             'long': Number,
             'region': String,
-            'visited': {user: Object}
+            'visited': {user: Object},
+            'favorite': {user: Object}
         },
         {
             collection: 'parks'
