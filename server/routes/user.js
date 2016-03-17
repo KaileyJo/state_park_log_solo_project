@@ -3,14 +3,14 @@ var router = express.Router();
 var passport = require('passport');
 var Users = require('../models/user');
 
-console.log('routes/user');
+//console.log('routes/user');
 
 router.get('/:id', function(req, res) {
     console.log('getting user/parks');
     Users.aggregate([{$lookup:{
         from: 'parks',
-        localField: 'park',
-        foreignField: 'name',
+        localField: 'name',
+        foreignField: 'park',
         as: 'parkInfo'
     }}], function(err, data) {
         if(err) {
@@ -46,6 +46,7 @@ router.put('/:id', function(req, res) {
         if(err) {
             console.log(err);
         }
+        res.sendStatus(200);
     });
 });
 

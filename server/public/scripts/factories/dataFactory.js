@@ -19,6 +19,7 @@ myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
     };
 
     var visitPark = function(park) {
+        console.log('Hey this is really weird.......');
         var data = {name: park};
         //console.log('clicked ', park, publicApi.userID);
         var promise = $http.put('/user/' + publicApi.userID, data).then(function(response) {
@@ -94,7 +95,7 @@ myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
             selectPark(park);
         },
         updateMyParks: function(park) {
-            visitPark(park);
+            return visitPark(park);
         },
         getUser: function() {
             return getUserData();

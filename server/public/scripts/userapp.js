@@ -17,9 +17,9 @@ myApp.config(['$routeProvider', function($routeProvider) {
     }).when('/visited', {
         templateUrl: '/views/templates/visited.html',
         controller: 'VisitedController'
-    }).when('/user', {
-        templateUrl: '/views/user.html',
-        controller: 'UserController'
+    //}).when('/user', {
+    //    templateUrl: '/views/user.html'
+        //controller: 'UserController'
     //}).when('/logout', {
     //    templateUrl: '/views/logout.html',
     //    controller: 'LogoutController'
