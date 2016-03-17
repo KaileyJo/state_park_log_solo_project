@@ -13,8 +13,8 @@ mongoose.model(
             'link': String,
             'lat': Number,
             'long': Number,
-            'region': String
-            //'visitedUserID': ObjectID
+            'region': String,
+            'visited': {user: Object}
         },
         {
             collection: 'parks'

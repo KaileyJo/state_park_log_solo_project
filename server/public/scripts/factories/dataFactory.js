@@ -1,10 +1,12 @@
 myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
     var parkList = undefined;
+    var visitedParkList = undefined;
     var userInfo = undefined;
 
     var getParkData = function() {
         var promise = $http.get('/parks').then(function(response) {
             parkList = response.data;
+            visitParkList();
         });
         return promise;
     };
@@ -18,29 +20,23 @@ myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
         parkList = park;
     };
 
-    var visitPark = function(park) {
-        var data = {name: park};
-        //console.log('clicked ', park, publicApi.userID);
-        var promise = $http.put('/user/' + publicApi.userID, data).then(function(response) {
-            //console.log('visitPark response', response.data);
+    var visitPark = function(parkID) {
+        var data = {user: publicApi.userID};
+        var promise = $http.put('/parks/' + parkID, data).then(function(response) {
         });
         return promise;
     };
 
     var getUserData = function() {
         var promise = $http.get('/user').then(function(response) {
-            //console.log('getting user data');
             if(response.data) {
-                //console.log('user data:: ', response.data);
                 userInfo = {
                     userName: response.data.username,
                     userParks: response.data.parks
                 };
-
                 publicApi.userID = response.data._id;
                 publicApi.loggedIn = true;
 
-                //console.log(userInfo);
             } else {
                 $window.location.href = '/#/login';
             }
@@ -50,34 +46,35 @@ myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
     };
 
     var getUserParkData = function() {
-        console.log('getuserparkdata userID:: ', publicApi.userID);
         var promise = $http.get('/user/' + publicApi.userID).then(function(response) {
-            console.log(response.data);
             if(response.data) {
-                console.log('getting user park data');
                 userInfo = {
                     userName: response.data.username,
                     userParks: response.data.parks,
                     parkInfo: response.data.parkInfo
                 };
                 parkList = [];
-                console.log(userInfo);
             } else {
                 console.log('errrrrrrr');
             }
-
-            //for(var i = 0; i < userInfo.parkInfo.length; i++) {
-            //    for(var j = 0; j < userInfo.userParks.length; j++) {
-            //        if (userInfo.parkInfo[i].park == userInfo.userParks[j].name) {
-            //            parkList.push(userInfo.parkInfo[i]);
-            //        }
-            //    }
-            //}
-            //parkList = response.data.parkInfo;
-
         });
 
         return promise;
+    };
+
+    var visitParkList = function() {
+        visitedParkList = [];
+        for (var i = 0; i < parkList.length; i++) {
+            if(parkList[i].visited) {
+                var visitedPark = parkList[i].visited;
+                for(var j = 0; j < visitedPark.length; j++) {
+                    if (publicApi.userID == visitedPark[j].user) {
+                        parkList[i].userVisited = true;
+                        visitedParkList.push(parkList[i]);
+                    }
+                }
+            }
+        }
     };
 
     var publicApi = {
@@ -90,11 +87,14 @@ myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
         parksList: function() {
             return parkList;
         },
+        visitedParksList: function() {
+            return visitedParkList;
+        },
         currentPark: function(park) {
             selectPark(park);
         },
-        updateMyParks: function(park) {
-            return visitPark(park);
+        updateMyParks: function(parkID) {
+            return visitPark(parkID);
         },
         getUser: function() {
             return getUserData();

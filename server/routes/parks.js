@@ -40,4 +40,17 @@ router.post('/', function(req, res) {
     });
 });
 
+router.put('/:id', function(req, res) {
+    var userID = req.body.user;
+    var id = req.params.id;
+    console.log('User ID from server:: ', userID);
+    Park.findByIdAndUpdate(id, {$push: {visited: {user: userID}}}, function(err, data) {
+        if(err) {
+            console.log(err);
+        }
+        res.sendStatus(200);
+    });
+});
+
+
 module.exports = router;

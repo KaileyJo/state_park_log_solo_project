@@ -2,7 +2,6 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-//var Schema = mongoose.Schema;
 
 var passport = require('./strategies/user');
 var session = require('express-session');
@@ -44,9 +43,6 @@ mongoDB.on('error', function(err) {
 mongoDB.once('open', function() {
     console.log('Connected to Mongo');
 });
-
-//mongoose.connect('mongodb://localhost/stateparklog');
-
 
 app.use(express.static('server/public/'));
 app.use(express.static('server/public/views'));

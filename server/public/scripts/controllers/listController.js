@@ -1,6 +1,6 @@
-myApp.controller('ListController', ['$scope', 'dataFactory',
-    function($scope, dataFactory) {
+myApp.controller('ListController', ['$scope', 'dataFactory', function($scope, dataFactory) {
     $scope.dataFactory = dataFactory;
+    $scope.userID = dataFactory.userID;
     $scope.loggedIn = dataFactory.loggedIn;
     var parks = [];
 
@@ -13,15 +13,9 @@ myApp.controller('ListController', ['$scope', 'dataFactory',
 
     getParkData();
 
-    $scope.visitPark = function(park) {
-        dataFactory.updateMyParks(park);
+    $scope.visitPark = function(parkID) {
+        dataFactory.updateMyParks(parkID).then(function() {
+            getParkData();
+        });
     };
 }]);
-
-
-//possible mongo request to join parks and name, puts all parks in parkinfo field
-//db.users.aggregate([{$lookup:{
-//from: 'parks',
-//    localField: 'park',
-//    foreignField: 'name',
-//    as: 'parkInfo'}}])

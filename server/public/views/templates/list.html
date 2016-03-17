@@ -22,7 +22,8 @@
         <td>{{park.siteType}}</td>
         <td>{{park.miles}}</td>
         <td ng-if="loggedIn">
-            <button ng-click="visitPark(park.park)">N</button>
+            <!--<button ng-if="userID != park.visited[0].user" ng-click="visitPark(park._id)">N</button>-->
+            <button ng-if="park.userVisited != true" ng-click="visitPark(park._id)">N</button>
         </td>
     </tr>
     </tbody>
