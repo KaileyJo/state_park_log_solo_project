@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'smart-table', 'ngMaterial']);
+var myApp = angular.module('myApp', ['ngRoute', 'smart-table']);
 
 myApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider

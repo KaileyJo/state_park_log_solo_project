@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'smart-table', 'ngMaterial']);
+var myApp = angular.module('myApp', ['ngRoute', 'smart-table']);
 
 myApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider
@@ -13,8 +13,8 @@ myApp.config(['$routeProvider', function($routeProvider) {
         controller: 'ListController'
     }).when('/login', {
         templateUrl: '/views/login.html'
-    //}).when('/user', {
-    //    templateUrl: '/views/user.html',
+    //}).when('/register', {
+    //    templateUrl: '/views/register.html'
     //    controller: 'UserController'
     }).otherwise({
         redirectTo: 'home'

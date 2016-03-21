@@ -3,6 +3,7 @@ myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
     var visitedParkList = undefined;
     var favoriteParkList = undefined;
     var userInfo = undefined;
+    var parkNameList = [];
 
     var getParkData = function() {
         var promise = $http.get('/parks').then(function(response) {
@@ -15,6 +16,11 @@ myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
 
     var postParkData = function(park) {
         var promise = $http.post('/parks', park).then(function(response) {});
+        return promise;
+    };
+
+    var putUserInfo = function(park) {
+        var promise = $http.put('/user/' + publicApi.userID, park).then(function(response) {});
         return promise;
     };
 
@@ -57,6 +63,7 @@ myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
     var visitParkList = function() {
         visitedParkList = [];
         for (var i = 0; i < parkList.length; i++) {
+            parkNameList.push(parkList[i].park);
             if(parkList[i].visited) {
                 var visitedPark = parkList[i].visited;
                 for(var j = 0; j < visitedPark.length; j++) {
@@ -91,6 +98,9 @@ myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
         postPark: function(park) {
             return postParkData(park);
         },
+        putUserPark: function(park) {
+            return putUserInfo(park);
+        },
         parksList: function() {
             return parkList;
         },
@@ -99,6 +109,9 @@ myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
         },
         favoriteParksList: function() {
             return favoriteParkList;
+        },
+        parkNames: function() {
+            return parkNameList;
         },
         currentPark: function(park) {
             selectPark(park);

@@ -1,20 +1,36 @@
+
 myApp.controller('HomeController', ['$scope', 'dataFactory', function($scope, dataFactory) {
     $scope.dataFactory = dataFactory;
     $scope.regions = ['Central', 'Metro', 'Northeast', 'Northwest', 'South'];
     $scope.loggedIn = dataFactory.loggedIn;
+    $scope.enterPark = false;
+    $scope.parksList = [];
 
     var getParkData = function() {
         dataFactory.getParks().then(function() {
             $scope.parks = dataFactory.parksList();
+            $scope.parksList = dataFactory.parkNames();
+            //console.log($scope.parksList);
+            //awesomplete.list = $scope.parksList;
         });
     };
 
+    //var input = document.getElementById('myInput');
+    //new Awesomplete(input, {list: '#myList'});
+    //var awesomplete = new Awesomeplete(input, {
+    //    minChars: 1,
+    //    autoFirst: true
+    //});
+
+
     $scope.selectPark = function(park) {
+        console.log(park);
+        //console.log()
         dataFactory.currentPark(park);
     };
 
     $scope.submitPark = function() {
-        console.log('submit clicked');
+        console.log('submit clicked', $scope.name);
         var newPark = {
             park: $scope.name,
             type: $scope.type,
@@ -27,6 +43,7 @@ myApp.controller('HomeController', ['$scope', 'dataFactory', function($scope, da
             long: $scope.long,
             region: $scope.region
         };
+        console.log(newPark);
         dataFactory.postPark(newPark).then(function() {
             $scope.name = '';
             $scope.type = '?';
@@ -39,8 +56,15 @@ myApp.controller('HomeController', ['$scope', 'dataFactory', function($scope, da
             $scope.long = '';
             $scope.region = '?';
             getParkData();
+            $scope.enterPark = false;
         });
+    };
+
+    $scope.newPark = function() {
+        $scope.enterPark = true;
     };
 
     getParkData();
 }]);
+
+

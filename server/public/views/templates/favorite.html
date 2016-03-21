@@ -1,12 +1,15 @@
-<h3>Favorites</h3>
-<div ng-repeat="park in parks">
-    <h2>{{park.park}} {{park.type}}</h2>
-    <h3>{{park.region}}</h3>
+<h1>Been There, Go Back!</h1>
+<div class="favDiv" ng-repeat="park in parks">
+    <div><img ng-src="{{park.image}}" /></div>
+    <div>
+    <h3>{{park.park}} {{park.type}}</h3>
+    <h5>{{park.region}}</h5>
     <p>{{park.description}}</p>
-    <ul>
+    <ul class="favList">
         <li>Location: {{park.lat}}, {{park.long}}</li>
         <li>{{park.siteNumber}} {{park.siteType}} campsites</li>
         <li>Available Hiking Trails: {{park.miles}} miles</li>
         <li><a href="{{park.link}}">More Info!</a></li>
     </ul>
+    </div>
 </div>

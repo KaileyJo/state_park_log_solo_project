@@ -1,21 +1,105 @@
 body {
     margin: 20px;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: large;
+    letter-spacing: 1px;
+    color: #1e1100;
+    background-color: #97a2b0;
+}
+
+h1 {
+    font-family: 'Economica', sans-serif;
+    text-align: center;
+}
+
+main {
+
+}
+
+h2 {
+
 }
 
 li {
     display: inline;
     padding-left: 20px;
+    color: #1e1100;
 }
 
 ul {
     list-style: none;
+    width: 1000px;
 }
 
 a {
-    color: black;
+    color: #1e1100;
     text-decoration: none;
 }
 
 input, select {
     display: block;
+    background-color: #fafafe;
+    color: #1e1100;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    border: 2px solid #354a67;
+    border-radius: 3px;
+    width: 300px;
+    height: auto;
+    margin-top: 70px;
+    /*float: left;*/
+    /*clear: both;*/
+}
+
+.infoPage {
+    text-align: center;
+}
+
+.favDiv {
+    display: flex;
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+    /*width: 80%;*/
+}
+
+.favDiv div {
+    width: 70%;
+    margin: 10px;
+}
+
+.favList {
+    margin-left: -20px;
+}
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+    background-color: #fafafe;
+    color: #1e1100;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.center {
+    text-align: center;
+}
+
+.navBar {
+    /*text-align: center;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    display: flex;
+    justify-content: space-around;
+}
+
+.welcome {
+    /*display: inline;*/
+    float: right;
 }

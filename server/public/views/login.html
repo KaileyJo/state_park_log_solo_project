@@ -8,18 +8,17 @@
 
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
     <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/vendors/smart-table.min.js"></script>
     <script type="text/javascript" src="/scripts/clientapp.js"></script>
 </head>
 
 <body ng-app="myApp">
     <h1>Login</h1>
     <form action="/login" method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username"/>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password"/>
+        <input placeholder="Username" type="text" name="username" id="username"/>
+        <input placeholder="Password" type="password" name="password" id="password"/>
         <input type="submit" value="Log In"/>
-        <a href="/register">Register</a>
+        <p class="center"><a href="/register">Register New User</a></p>
     </form>
 </body>
 </html>

@@ -36,17 +36,23 @@ router.get('/', function(req, res) {
     }
 });
 
-//router.put('/:id', function(req, res) {
-//    var parkName = req.body.name;
-//    var id = req.params.id;
-//    console.log('Park name from server:: ', parkName);
-//    Users.findByIdAndUpdate(id, {$push: {parks: {name: parkName, visited: true}}}, function(err, data) {
-//        if(err) {
-//            console.log(err);
-//        }
-//        res.sendStatus(200);
-//    });
-//});
+//router.put('/:id', function)
+
+router.put('/:id', function(req, res) {
+    var parkName = req.body.name;
+    var id = req.params.id;
+    var campsite = req.body.campsite;
+    var miles = req.body.miles;
+    var notes = req.body.notes;
+    var rating = req.body.rating;
+    console.log('Park name from server:: ', parkName);
+    Users.findByIdAndUpdate(id, {$push: {parks: {name: parkName, id: id, campsite: campsite, miles: miles, notes: notes, rating: rating}}}, function(err, data) {
+        if(err) {
+            console.log(err);
+        }
+        res.sendStatus(200);
+    });
+});
 
 module.exports = router;
 

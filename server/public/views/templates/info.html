@@ -1,9 +1,13 @@
-<h2>{{park.park}} {{park.type}}</h2>
-<h3>{{park.region}}</h3>
-<p>{{park.description}}</p>
-<ul>
-    <li>Location: {{park.lat}}, {{park.long}}</li>
-    <li>{{park.siteNumber}} {{park.siteType}} campsites</li>
-    <li>Available Hiking Trails: {{park.miles}} miles</li>
-    <li><a href="{{park.link}}">More Info!</a></li>
-</ul>
+<div class="infoPage">
+<img ng-src="{{park.image}}" />
+<div class="info">
+    <h3>{{park.park}} {{park.type}}</h3>
+    <h4>{{park.region}}</h4>
+    <p>{{park.description}}</p>
+    <ul>
+        <li>Location: {{park.lat}}, {{park.long}}</li>
+        <li>{{park.siteNumber}} {{park.siteType}} campsites</li>
+        <li>Available Hiking Trails: {{park.miles}} miles</li>
+        <li><a href="{{park.link}}">More Info!</a></li>
+    </ul>
+</div></div>

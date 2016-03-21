@@ -1,6 +1,8 @@
+<div class="infoPage">
+    <h1>Been There, Done That.</h1>
 <div ng-if="currentID" ng-repeat="park in parkTable">
-    <div ng-if="currentID == park._id">
-        <form><h5>{{park.park}}</h5>
+    <div ng-show="currentID == park._id">
+        <form><h5 ng-model="parkName" value="park.park">{{park.park}}</h5>
             <input type="number" ng-model="campsite" placeholder="Your Site #" />
             <input type="number" ng-model="miles" placeholder="Miles Hiked" />
             <textarea rows="4" cols="50" ng-model="notes" placeholder="Notes..."></textarea>
@@ -8,14 +10,14 @@
                 <option value="">Stars</option>
                 <option ng-repeat="number in rangeValues" value="{{number}}">{{number}} / 5</option>
             </select>
-            <input type="submit" ng-click="updateUserPark()" value="Submit Park" />
+            <input type="submit" ng-click="updateUserPark()" value="Update Your Park" />
         </form>
     </div>
 </div>
 <table st-table="displayedParks" st-safe-src="parkTable" class="table table-striped">
     <thead>
     <tr>
-        <th colspan="6"><input st-search="" class="form-control" placeholder="Search Parks..." type="text"/></th>
+        <th colspan="7"><input st-search="" class="form-control" placeholder="Search Parks..." type="text"/></th>
     </tr>
     <tr>
         <th st-sort="park">Park Name</th>
@@ -38,7 +40,8 @@
             <button ng-if="park.userFavorite != true" ng-click="favoritePark(park._id)">N</button>
             <button ng-if="park.userFavorite == true">Y</button>
         </td>
-        <td><button ng-click="update(park._id)">Edit Park</button></td>
+        <td><button ng-click="update(park)">Edit Park</button></td>
     </tr>
     </tbody>
 </table>
+</div>
