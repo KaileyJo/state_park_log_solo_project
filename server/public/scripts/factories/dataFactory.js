@@ -8,6 +8,7 @@ myApp.factory('dataFactory', ['$http', '$window', function($http, $window) {
     var getParkData = function() {
         var promise = $http.get('/parks').then(function(response) {
             parkList = response.data;
+            console.log(parkList);
             visitParkList();
             favParkList();
         });

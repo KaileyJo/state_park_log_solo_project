@@ -2,12 +2,15 @@ myApp.controller('VisitedController', ['$scope', 'dataFactory', function($scope,
     $scope.dataFactory = dataFactory;
     $scope.loggedIn = dataFactory.loggedIn;
     $scope.rangeValues = [1, 2, 3, 4, 5];
-    $scope.campsite = '';
-    $scope.miles = '';
+    $scope.campsite = 0;
+    $scope.miles = 0;
     $scope.notes = '';
     $scope.rating = '';
-    $scope.currentID;
+    $scope.currentID = undefined;
     $scope.currentPark;
+    $scope.parkName;
+
+    console.log('dataFactory userid', dataFactory.userID);
 
     var getParkData = function () {
             dataFactory.getParks().then(function() {
@@ -31,9 +34,10 @@ myApp.controller('VisitedController', ['$scope', 'dataFactory', function($scope,
 
     $scope.updateUserPark = function() {
         console.log($scope.currentPark.park);
+        var parkName = $scope.currentPark.park;
         var newUserInfo = {
             parkID: $scope.currentID,
-            parkName: $scope.currentPark.park,
+            parkName: parkName,
             campsite: $scope.campsite,
             miles: $scope.miles,
             notes: $scope.notes,
@@ -41,8 +45,8 @@ myApp.controller('VisitedController', ['$scope', 'dataFactory', function($scope,
         };
 
         console.log(newUserInfo);
-        //dataFactory.putUserPark(newUserInfo).then(function() {
-        //    $scope.currentID = '';
-        //});
+        dataFactory.putUserPark(newUserInfo).then(function() {
+            $scope.currentID = '';
+        });
     }
 }]);

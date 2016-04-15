@@ -1,8 +1,8 @@
 <div class="infoPage">
     <h1>Been There, Done That.</h1>
-<div ng-if="currentID" ng-repeat="park in parkTable">
-    <div ng-show="currentID == park._id">
-        <form><h5 ng-model="parkName" value="park.park">{{park.park}}</h5>
+<div ng-show="currentID">
+    <div>
+        <form><h5 ng-model="parkName">{{currentPark.park}}</h5>
             <input type="number" ng-model="campsite" placeholder="Your Site #" />
             <input type="number" ng-model="miles" placeholder="Miles Hiked" />
             <textarea rows="4" cols="50" ng-model="notes" placeholder="Notes..."></textarea>
@@ -12,6 +12,8 @@
             </select>
             <input type="submit" ng-click="updateUserPark()" value="Update Your Park" />
         </form>
+        {{miles}}
+        {{campsite}}
     </div>
 </div>
 <table st-table="displayedParks" st-safe-src="parkTable" class="table table-striped">

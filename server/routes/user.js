@@ -39,8 +39,8 @@ router.get('/', function(req, res) {
 //router.put('/:id', function)
 
 router.put('/:id', function(req, res) {
-    var parkName = req.body.name;
-    var id = req.params.id;
+    var parkName = req.body.parkName;
+    var id = req.params.parkID;
     var campsite = req.body.campsite;
     var miles = req.body.miles;
     var notes = req.body.notes;
