@@ -1,4 +1,3 @@
-
 myApp.controller('HomeController', ['$scope', 'dataFactory', function($scope, dataFactory) {
     $scope.dataFactory = dataFactory;
     $scope.regions = ['Central', 'Metro', 'Northeast', 'Northwest', 'South'];
