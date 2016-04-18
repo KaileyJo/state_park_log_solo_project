@@ -32,7 +32,11 @@ app.use('/parks', parks);
 app.use('/login', login);
 app.use('/logout', logout);
 
-var mongoURI = 'mongodb://localhost:27017/stateparklog';
+//local DB
+//var mongoURI = 'mongodb://localhost:27017/stateparklog';
+
+//heroku DB
+var mongoURI = MONGODB_URI;
 
 var mongoDB = mongoose.connect(mongoURI).connection;
 

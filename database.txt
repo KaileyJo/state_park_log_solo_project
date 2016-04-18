@@ -1,0 +1,644 @@
+[{
+    "_id" : ObjectId("56df3d9afa4044183164b47d"),
+    "park" : "Afton",
+    "type" : "SP",
+    "siteType" : "rustic",
+    "siteNumber" : 28,
+    "miles" : 20,
+    "description" : "Grand oaks and delicate prairie flowers grace the rugged, rolling landscape of this park. Trails traverse remnant and restored prairies, wind down deep ravines and rise up to the grassy ridgetops and bluffs overlooking the scenic St. Croix River. The trails are perfect for hikers, horseback riders and cross-country skiers. The park offers visitors a swimming beach, backpack campsites and a visitor center with interpretive displays.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/afton/index.html",
+    "lat" : "44.8624675",
+    "long" : "-92.7835367",
+    "region" : "Metro",
+    "image" : "http://images.dnr.state.mn.us/destinations/state_parks/virtual_tours/afton/accessible/300x200/swimming_beach.jpg"
+},
+{
+    "_id" : ObjectId("56df3e64fa4044183164b47e"),
+    "park" : "Banning",
+    "type" : "SP",
+    "siteType" : "semi-modern",
+    "siteNumber" : 33,
+    "miles" : 14,
+    "description" : "Treat yourself to a visit to Banning State Park, just minutes off I-35 near Sandstone. In the spring, watch daring canoeists and kayakers shoot the turbulent rapids at Blueberry Slide, Mother's Delight, Dragon's Tooth and Hell's Gate. In the summer, hike along the Kettle River amid dramatic sandstone rock formations with lush lichens, liverworts and mosses. Visit Wolf Creek Falls, the Log Creek Arches and Robinson's Ice Cave. Take in the historic ruins of Banning Sandstone Quarry. The park is known for camping, picnicking, cross-country skiing, beautiful trails for hiking and the study of natural history.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/banning/index.html",
+    "lat" : "46.1707812",
+    "long" : "-92.8440889",
+    "region" : "Northeast",
+    "image" : "http://images.dnr.state.mn.us/destinations/state_parks/virtual_tours/banning/accessible/300x200/07.jpg"
+},
+{
+    "_id" : ObjectId("56df3e81fa4044183164b47f"),
+    "park" : "Father Hennepin",
+    "type" : "SP",
+    "siteType" : "semi-modern",
+    "siteNumber" : 103,
+    "miles" : 4.5,
+    "description" : "Father Hennepin State Park is located on the southeast shore of Mille Lacs Lake. Visitors enjoy a large sandy beach for swimming, two boat accesses, fishing piers and picnic sites with a panoramic view of the lake. The park's 320 acres include two campgrounds and hiking trails that wind through a hardwood forest and along the rocky shoreline of Mille Lacs. The park's original vegetation was northern hardwoods mixed with marsh areas and pines along the lake. The hardwoods provide shade during the summer and spectacular color in the fall.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/father_hennepin/index.html",
+    "lat" : "46.1446779",
+    "long" : "-93.4880157",
+    "region" : "Central",
+    "image" : "http://images.dnr.state.mn.us/destinations/state_parks/virtual_tours/fatherhennepin/accessible/300x200/17.jpg"
+},
+{
+    "_id" : ObjectId("56df3ebffa4044183164b480"),
+    "park" : "Gooseberry Falls",
+    "type" : "SP",
+    "siteType" : "semi-modern",
+    "siteNumber" : 69,
+    "miles" : 18,
+    "description" : "Gooseberry Falls is the gateway to the North Shore. It is known for its spectacular waterfalls, river gorge, Lake Superior shoreline, Civilian Conservation Corps log and stone structures, and north woods wildlife. Listen to the thunderous roar of the Upper, Middle and Lower Falls of the Gooseberry River as it plummets through a rocky gorge. Watch for waves, ships, or the moon rise on Lake Superior from an ancient lava flow known as the Picnic Flow. Hike or ski to see the Fifth Falls through a forest of evergreens, aspen, and birch, and enjoy camping in modern campsites, picnicking, and relaxing along the Lake Superior shoreline or the Gooseberry River. To get the most out of your visit, stop by the Joseph N. Alexander Visitor Center where you can find park information, interpretive displays, a park video, Nature Store, and more. Don't miss the Gateway Plaza for outdoor interpretive signs on area resources and history.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/gooseberry_falls/index.html",
+    "lat" : "47.1468715",
+    "long" : "-91.4632289",
+    "region" : "Northeast",
+    "image" : "http://images.dnr.state.mn.us/destinations/state_parks/virtual_tours/gooseberry_falls/accessible/300x200/10.jpg"
+},
+{
+    "_id" : ObjectId("56df3ed6fa4044183164b481"),
+    "park" : "Jay Cooke",
+    "type" : "SP",
+    "siteType" : "semi-modern",
+    "siteNumber" : 82,
+    "miles" : 50,
+    "description" : "Trailblazers: this park is a must! Park trails link up to the Willard Munger State Trail at the north edge of the park; perfect for backpackers, bikers (both mountain and tour), hikers, horseback riders, and skiers. Check out the wildflowers in the spring, and the vivid colors in the fall. Walk on the swinging suspension bridge high above the raging St. Louis River. Visit the historic cemetery and the gorge at Thomson Dam.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/jay_cooke/index.html",
+    "lat" : "46.6496646",
+    "long" : "-92.330748",
+    "region" : "Northeast",
+    "image" : "http://images.dnr.state.mn.us/destinations/state_parks/virtual_tours/jay_cooke//accessible/300x200//river_gorge.jpg"
+},
+{
+    "_id" : ObjectId("56df3ef1fa4044183164b482"),
+    "park" : "Judge C.R. Magney",
+    "type" : "SP",
+    "siteType" : "semi-modern",
+    "siteNumber" : 27,
+    "miles" : 9,
+    "description" : "Come for the quiet, the solitude, and the famous Devil's Kettle waterfall. The most popular hike leads from the trailhead upstream along the Brule River to Devil's Kettle, where the river splits around a mass of volcanic rock. Half of the river plunges 50 feet into a pool, while the rest pours into a huge pothole. Anglers can catch brook and rainbow trout in the Brule River or its tributary, Gauthier Creek. The park offers camping, picnicking and hiking.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/judge_cr_magney/index.html",
+    "lat" : "44.1619082",
+    "long" : "-91.8220997",
+    "region" : "South",
+    "image" : "http://images.dnr.state.mn.us/destinations/state_parks/virtual_tours/judge_magney/accessible/300x200/6.jpg"
+},
+{
+    "_id" : ObjectId("56df3f0dfa4044183164b483"),
+    "park" : "Scenic",
+    "type" : "SP",
+    "siteType" : "semi-modern",
+    "siteNumber" : 93,
+    "miles" : 10,
+    "description" : "With its pristine lakes, virgin pines, swimming beach, and wilderness-like setting, Scenic State Park is well deserving of its name. Here, visitors can hike the Chase Point Trail for hypnotic views of Coon and Sandwick Lakes and listen to the wind whistle through the giant pines. The park's overnight facilities include campsites (boat-in, drive-in, backpack), and a cabin. The historic lodge houses interpretive displays.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/scenic/index.html",
+    "lat" : "47.7157733",
+    "long" : "-93.5629701",
+    "region" : "Northeast",
+    "image" : "http://images.dnr.state.mn.us/destinations/state_parks/virtual_tours/scenic/accessible/300x200/boat_access_sunrise.jpg"
+},
+{
+    "_id" : ObjectId("56df3f23fa4044183164b484"),
+    "park" : "Temperance River",
+    "type" : "SP",
+    "siteType" : "semi-modern",
+    "siteNumber" : 55,
+    "miles" : 8,
+    "description" : "Take the trail that winds along the edge of the Temperance River gorge and enjoy the rushing waterfalls surrounded by pine, spruce, cedar and birch forests. The rapidly flowing river has cut deep potholes in and along the riverbed. Hike the trail to Hidden Falls or connect up with trails into the Superior National Forest and the Cross River Wayside. Visitors come to camp and picnic along the shore of Lake Superior. Winter brings cross-country skiers and snowmobilers to tackle the hilly terrain. Carlton Peak, a recent addition to the park, is popular with rock climbers and offers even more recreational opportunities to park visitors.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/temperance_river/index.html",
+    "lat" : "47.5543466",
+    "long" : "-90.8723722",
+    "region" : "Northeast",
+    "image" : "http://images.dnr.state.mn.us/destinations/state_parks/virtual_tours/temperance_river/accessible/300x200/2.jpg"
+},
+{
+    "_id" : ObjectId("56df3f3cfa4044183164b485"),
+    "park" : "Tettegouche",
+    "type" : "SP",
+    "siteType" : "semi-modern",
+    "siteNumber" : 34,
+    "miles" : 23,
+    "description" : "Come to Tettegouche for a great sense of the North Shore: the spectacular overlooks at Shovel Point; rocky, steep cliffs and inland bluffs; the cascading 60 ft. High Falls of the Baptism River; and the historic Tettegouche Camp where visitors can stay the night. This is a hiker's paradise with miles of trails that overlook the Sawtooth Mountains and wind down to inland lakes accessible only by foot. The Palisade Valley Unit features broad scenic vistas coupled with an expanse of multi-use, four-season trails. Two more trout lakes complement the fishing opportunities within the rest of the park. The park is also known for rock climbing opportunities and quality birdwatching in the spring, summer, and especially the fall.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/tettegouche/index.html",
+    "lat" : "47.358806",
+    "long" : "-91.2640506",
+    "region" : "Northeast",
+    "image" : "http://images.dnr.state.mn.us/destinations/state_parks/virtual_tours/tettegouche/accessible/300x200/6.jpg"
+},
+{
+    "_id" : ObjectId("56df3ff4fa4044183164b486"),
+    "park" : "William O'Brien",
+    "type" : "SP",
+    "siteType" : "semi-modern",
+    "siteNumber" : 144,
+    "miles" : 16,
+    "description" : "A great \"get away\" park only one hour from the Twin Cities, William O'Brien provides a beautiful setting for quality recreation along the banks of the St. Croix River. Hiking trails offer quiet exploration of the park's rolling, wooded hills. For anglers, the channels of the St. Croix have northerns, walleye, bass and trout. Ideal for canoeing, the river is also a migratory pathway that offers visitors an exciting diversity of sights and sounds. In the winter, snowshoeing, skiing and camping attract enthusiasts.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/william_obrien/index.html",
+    "lat" : "45.2194109",
+    "long" : "-92.7660423",
+    "region" : "Metro",
+    "image" : "http://images.dnr.state.mn.us/destinations/state_parks/virtual_tours/william_obrien/accessible/300x200/1.jpg"
+},
+{
+    "_id" : ObjectId("56df4010fa4044183164b487"),
+    "park" : "Zippel Bay",
+    "type" : "SP",
+    "siteType" : "semi-modern",
+    "siteNumber" : 60,
+    "miles" : 6,
+    "description" : "After visiting Zippel Bay, you’ll remember the sunsets and the miles of white sand beach. The park is located on Lake of the Woods, one of the world’s largest lakes. The mood of the lake is always changing, from approaching storms that bring three-foot-high crashing waves and lightning flashes to an eerie stillness, broken only by the faint calls of a thousand raucous gulls, out of sight in the lake’s interior. In summer, the 3,000-acre park offers a swimming beach and picnic area on the big lake, drive-in campsites and a group camp, a marina on Zippel Bay and a stone jetty providing protected access to Lake of the Woods. Birding is excellent—be sure to watch for sandhill cranes and piping plovers. In the winter, three miles of snowmobile trail provide access to the lake, which snowmobilers will find dotted with fish houses making virtual towns on the ice. Seven miles of groomed cross-country trails wind to the lakeshore through jack pine, birch, and open fields.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/zippel_bay/index.html",
+    "lat" : "48.8638742",
+    "long" : "-94.8593862",
+    "region" : "Northwest",
+    "image" : "http://images.dnr.state.mn.us/destinations/state_parks/virtual_tours/zippel_bay/accessible/300x200/zb_01.jpg"
+},
+{
+    "_id" : ObjectId("56e0809596ef60e22415b162"),
+    "park" : "Maplewood",
+    "type" : "SP",
+    "siteType" : "semi-modern",
+    "siteNumber" : 71,
+    "miles" : 25,
+    "description" : "The maple forest turns brilliant shades of orange, gold, and red in the fall. Eight major lakes and many ponds offer water lovers places to swim, fish, boat, and simply relax. Lake Lida has a sandy beach and large picnic areas for visitors. Drive along the scenic route to observe the wildlife: the park is host to 150 bird species and 50 species of mammals. The extensive trail system attracts hikers, horseback riders, and cross-country skiers.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/maplewood/index.html",
+    "lat" : "46.5335703",
+    "long" : "-95.9492193",
+    "region" : "Central",
+    "image" : "http://images.dnr.state.mn.us/destinations/state_parks/virtual_tours/maplewood/accessible/300x200/1.jpg"
+},
+{
+    "_id" : ObjectId("56e0841d8b2ef153255af692"),
+    "park" : "Nerstrand Big Woods",
+    "type" : "SP",
+    "siteType" : "semi-modern",
+    "siteNumber" : 51,
+    "miles" : 12,
+    "description" : "Enjoy this park on foot, any season of the year. In the spring, the park is a wildflower garden where hepatica, bloodroot, Dutchman's breeches, and the dwarf trout lily bloom. The dwarf trout lily is only found here. Relax by Hidden Falls in the summer. The autumn brings a burst of red, orange, and gold in the maple-basswood forest, one of the last extensive stands of the \"Big Woods.\" When winter comes, ski or snowmobile the trails through picturesque woods.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/nerstrand_big_woods/index.html",
+    "lat" : "44.3452425",
+    "long" : "-93.1074337",
+    "region" : "South",
+    "image" : "http://images.dnr.state.mn.us/destinations/state_parks/virtual_tours/nerstrand_big_woods/accessible/300x200/nbw_05.jpg"
+},
+{
+    "_id" : ObjectId("56e084908b2ef153255af693"),
+    "park" : "Cascade River",
+    "type" : "SP",
+    "siteType" : "semi-modern",
+    "siteNumber" : 40,
+    "miles" : 18,
+    "description" : "Come to Cascade for the rushing river and grand waterfalls that lay within a gorge, lush with moss and ferns that grow on black volcanic rocks. Hike the trail through birch, spruce and white cedar; stop to see the views of Lake Superior, the largest freshwater lake in the world. Trails connect with the Superior Hiking Trail and the North Shore State Trail and offer great recreational opportunities to hikers and cross-country skiers. Drive-in and backpack campsites are available.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/cascade_river/index.html",
+    "lat" : "47.7097222",
+    "long" : "-90.5222222",
+    "region" : "Northeast",
+    "image" : "http://images.dnr.state.mn.us/destinations/state_parks/virtual_tours/cascade/accessible/300x200/020.jpg"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b48a"),
+    "park" : "Bear Head Lake",
+    "type" : "SP",
+    "lat" : "47.7963051",
+    "long" : "-92.0768231",
+    "region" : "Northeast"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b48b"),
+    "park" : "Beaver Creek Valley",
+    "type" : "SP",
+    "lat" : "43.6427458",
+    "long" : "-91.5818101",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b48c"),
+    "park" : "Big Stone Lake",
+    "type" : "SP",
+    "lat" : "45.3824644",
+    "long" : "-96.5131148",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b48d"),
+    "park" : "Blue Mounds",
+    "type" : "SP",
+    "lat" : "43.7069134",
+    "long" : "-96.1869728",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b48e"),
+    "park" : "Buffalo River",
+    "type" : "SP",
+    "lat" : "46.8655165",
+    "long" : "-96.4678474",
+    "region" : "Northwest"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b48f"),
+    "park" : "Camden",
+    "type" : "SP",
+    "lat" : "44.362462",
+    "long" : "-95.9250247",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b490"),
+    "park" : "Carley",
+    "type" : "SP",
+    "lat" : "44.1166318",
+    "long" : "-92.1760002",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b491"),
+    "park" : "Charles A. Lindbergh",
+    "type" : "SP",
+    "lat" : "45.9588545",
+    "long" : "-94.3952813",
+    "region" : "Central"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b492"),
+    "park" : "Crow Wing",
+    "type" : "SP",
+    "lat" : "46.2722222",
+    "long" : "-94.3333333",
+    "region" : "Central"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b493"),
+    "park" : "Flandrau",
+    "type" : "SP",
+    "lat" : "44.2882956",
+    "long" : "-94.4735837",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b494"),
+    "park" : "Forestville Mystery Cave",
+    "type" : "SP",
+    "lat" : "43.6255204",
+    "long" : "-92.247388",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b495"),
+    "park" : "Fort Ridgely",
+    "type" : "SP",
+    "lat" : "44.4524621",
+    "long" : "-94.7308199",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b496"),
+    "park" : "Fort Snelling",
+    "type" : "SP",
+    "lat" : "44.8857988",
+    "long" : "-93.1779985",
+    "region" : "Metro"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b497"),
+    "park" : "Franz Jevne",
+    "type" : "SP",
+    "lat" : "48.642240",
+    "long" : "-94.080410",
+    "region" : "Northeast"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b498"),
+    "park" : "Frontenac",
+    "type" : "SP",
+    "lat" : "44.5074677",
+    "long" : "-92.3262914",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b499"),
+    "park" : "George H. Crosby Manitou",
+    "type" : "SP",
+    "lat" : "47.506018",
+    "long" : "-91.109045",
+    "region" : "Northeast"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b49a"),
+    "park" : "Glacial Lakes",
+    "type" : "SP",
+    "lat" : "45.537461",
+    "long" : "-95.521983",
+    "region" : "Central"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b49b"),
+    "park" : "Glendalough",
+    "type" : "SP",
+    "lat" : "46.3333333",
+    "long" : "-95.6666667",
+    "region" : "Central"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b49c"),
+    "park" : "Grand Portage",
+    "type" : "SP",
+    "lat" : "48.0101633",
+    "long" : "-89.6120317",
+    "region" : "Northeast"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b49d"),
+    "park" : "Great River Bluffs",
+    "type" : "SP",
+    "lat" : "43.9463526",
+    "long" : "-91.3993094",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b49e"),
+    "park" : "Hayes Lake",
+    "type" : "SP",
+    "lat" : "48.623309",
+    "long" : "-95.507753",
+    "region" : "Northwest"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b49f"),
+    "park" : "Hill-Annex Mine",
+    "type" : "SP",
+    "lat" : "47.327490",
+    "long" : "-93.277520",
+    "region" : "Northeast"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4a0"),
+    "park" : "Interstate",
+    "type" : "SP",
+    "lat" : "45.3949622",
+    "long" : "-92.6696521",
+    "region" : "Metro"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4a1"),
+    "park" : "Itasca",
+    "type" : "SP",
+    "lat" : "47.1974579",
+    "long" : "-95.2019642",
+    "region" : "Northwest"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4a2"),
+    "park" : "John A. Latsch",
+    "type" : "SP",
+    "lat" : "44.1619082",
+    "long" : "-91.8220997",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4a3"),
+    "park" : "Kilen Woods",
+    "type" : "SP",
+    "lat" : "43.7266244",
+    "long" : "-95.0630473",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4a4"),
+    "park" : "Lac qui Parle",
+    "type" : "SP",
+    "lat" : "45.0205141",
+    "long" : "-95.888921",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4a5"),
+    "park" : "Lake Bemidji",
+    "type" : "SP",
+    "lat" : "47.5363413",
+    "long" : "-94.8227704",
+    "region" : "Northwest"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4a6"),
+    "park" : "Lake Bronson",
+    "type" : "SP",
+    "lat" : "48.7247004",
+    "long" : "-96.6033741",
+    "region" : "Northwest"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4a7"),
+    "park" : "Lake Carlos",
+    "type" : "SP",
+    "lat" : "45.9866293",
+    "long" : "-95.3278143",
+    "region" : "Central"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4a8"),
+    "park" : "Lake Louise",
+    "type" : "SP",
+    "lat" : "43.5335762",
+    "long" : "-92.5254538",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4a9"),
+    "park" : "Lake Maria",
+    "type" : "SP",
+    "lat" : "45.3138543",
+    "long" : "-93.9572003",
+    "region" : "Metro"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4aa"),
+    "park" : "Lake Shetek",
+    "type" : "SP",
+    "lat" : "44.1021838",
+    "long" : "-95.6900114",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4ab"),
+    "park" : "Lake Vermilion",
+    "type" : "SP",
+    "lat" : "47.83471",
+    "long" : "-92.19812",
+    "region" : "Northeast"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4ac"),
+    "park" : "McCarthy Beach",
+    "type" : "SP",
+    "lat" : "47.6727068",
+    "long" : "-93.0301834",
+    "region" : "Northeast"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4ad"),
+    "park" : "Mille Lacs Kathio",
+    "type" : "SP",
+    "lat" : "46.1288485",
+    "long" : "-93.7405269",
+    "region" : "Central"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4ae"),
+    "park" : "Minneopa",
+    "type" : "SP",
+    "lat" : "44.1621879",
+    "long" : "-94.1021803",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4af"),
+    "park" : "Monson Lake",
+    "type" : "SP",
+    "lat" : "45.3205175",
+    "long" : "-95.2750235",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4b0"),
+    "park" : "Moose Lake",
+    "type" : "SP",
+    "lat" : "46.436319",
+    "long" : "-92.72521",
+    "region" : "Northeast"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4b1"),
+    "park" : "Myre-Big Island",
+    "type" : "SP",
+    "lat" : "43.6238465",
+    "long" : "-93.2890959",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4b2"),
+    "park" : "Old Mill",
+    "type" : "SP",
+    "lat" : "48.361364",
+    "long" : "-96.5703288",
+    "region" : "Northwest"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4b3"),
+    "park" : "Rice Lake",
+    "type" : "SP",
+    "lat" : "44.0874639",
+    "long" : "-93.061315",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4b4"),
+    "park" : "Saint Croix",
+    "type" : "SP",
+    "lat" : "45.9741154",
+    "long" : "-92.5835304",
+    "region" : "Northeast"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4b5"),
+    "park" : "Sakatah Lake",
+    "type" : "SP",
+    "lat" : "44.2210746",
+    "long" : "-93.5357792",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4b6"),
+    "park" : "Savanna Portage",
+    "type" : "SP",
+    "lat" : "46.8374455",
+    "long" : "-93.1566054",
+    "region" : "Central"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4b7"),
+    "park" : "Schoolcraft",
+    "type" : "SP",
+    "lat" : "47.2249502",
+    "long" : "-93.7999449",
+    "region" : "Northwest"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4b8"),
+    "park" : "Sibley",
+    "type" : "SP",
+    "lat" : "45.3196867",
+    "long" : "-95.0230696",
+    "region" : "Central"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4b9"),
+    "park" : "Soudan Underground Mine",
+    "type" : "SP",
+    "lat" : "47.8246403",
+    "long" : "-92.2562691",
+    "region" : "Northeast"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4ba"),
+    "park" : "Split Rock Creek",
+    "type" : "SP",
+    "lat" : "43.8980264",
+    "long" : "-96.3642032",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4bb"),
+    "park" : "Split Rock Lighthouse",
+    "type" : "SP",
+    "lat" : "47.1921472",
+    "long" : "-91.3929484",
+    "region" : "Northeast"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4bc"),
+    "park" : "Upper Sioux Agency",
+    "type" : "SP",
+    "lat" : "44.7380132",
+    "long" : "-95.4539039",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4bd"),
+    "park" : "Whitewater",
+    "type" : "SP",
+    "lat" : "44.058297",
+    "long" : "-92.0587726",
+    "region" : "South"
+},
+{
+    "_id" : ObjectId("56e0904efa4044183164b4be"),
+    "park" : "Wild River",
+    "type" : "SP",
+    "lat" : "45.5680159",
+    "long" : "-92.8757696",
+    "region" : "Metro"
+},
+{
+    "_id" : ObjectId("56e0aabd7208db2d288c8472"),
+    "park" : "Big Bog",
+    "type" : "SRA",
+    "siteType" : "semi-modern",
+    "siteNumber" : 31,
+    "miles" : 4.5,
+    "lat" : "48.1928",
+    "long" : "-94.5119",
+    "region" : "Northwest",
+    "description" : "Big Bog State Recreation Area has been called Minnesota's last true wilderness. This two-part recreation area includes a northern unit and a southern unit. The 500-square-mile peat bog, the largest in the lower 48 states, is located in the northern unit. A mile-long boardwalk, completed in 2005, enables visitors to get a first-hand look at the unique plant and animal life of this rare resource. The bog, which has long been a source of medicinal plants for the Ojibwe Indians, represented a barrier to European settlers who tried in vain to drain it. Today, many of the native plants, including yellow-eyed grass, bog rush and two kinds of sundews, are on Minnesota's endangered or threatened species list. From orchids to carnivorous plants to rare birds, visitors will see a mixture of fascinating and rare resources. The southern unit includes a campground with 31 campsites (26 electric sites) winterized camper cabins, a sandy beach, picnic grounds, and great fishing.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/big_bog/index.html"
+},
+{
+    "_id" : ObjectId("56f023bab96518717e231151"),
+    "park" : "Garden Island",
+    "type" : "SRA",
+    "siteNumber" : 0,
+    "miles" : 0,
+    "description" : "Remote and virtually undeveloped, Garden Island State Recreation Area is the northernmost unit of the Minnesota State Park system. Part of its attraction is the challenge of getting there—as you leave the south shore of Lake of the Woods, the island is 19 miles away and not yet visible on the horizon. But once you arrive, the island itself will charm you. Its quiet beaches beckon you to stroll along the retreating waves. Birds scamper at the water’s edge and dart above you in the air. Fishing boats come into dock for shore lunches, with visitors from near and far enjoying a midday break at the picnic tables. Or you may want to take a bit more time and explore the woods and marshes of the island’s interior. Winter offers opportunities too—and snowmobiling across Lake of the Woods may feel like your first Arctic adventure.",
+    "link" : "http://www.dnr.state.mn.us/state_parks/garden_island/index.html",
+    "region" : "Northwest",
+    "__v" : 0
+}]
