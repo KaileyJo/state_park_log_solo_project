@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var MONGODB_URI = process.env.MONGOLAB_URI;
 
 var passport = require('./strategies/user');
 var session = require('express-session');
