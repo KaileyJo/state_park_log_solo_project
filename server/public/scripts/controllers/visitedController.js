@@ -50,3 +50,5 @@ myApp.controller('VisitedController', ['$scope', 'dataFactory', function($scope,
         });
     }
 }]);
+
+//add more specific functionality to this feature!
